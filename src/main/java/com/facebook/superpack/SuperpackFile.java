@@ -2,7 +2,6 @@ package com.facebook.superpack;
 
 import java.io.Closeable;
 import java.io.InputStream;
-//import p000X.AnonymousClass0Y1;
 
 public final class SuperpackFile implements Closeable {
 	public int mLength;
@@ -49,9 +48,9 @@ public final class SuperpackFile implements Closeable {
 		}
 	}
 
-//	static {
-//		AnonymousClass0Y1.A08("superpack-jni");
-//	}
+	static {
+		System.loadLibrary("superpack-jni");
+	}
 
 	public SuperpackFile(long j) {
 		if (j != 0) {

@@ -5,9 +5,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-//import p000X.AnonymousClass0Y1;
 
-public class SuperpackArchive implements Iterator, Closeable {
+public class SuperpackArchive implements Iterator<SuperpackFile>, Closeable {
 	public long mPtr;
 
 	public static native void appendNative(long j, long j2);
@@ -56,9 +55,9 @@ public class SuperpackArchive implements Iterator, Closeable {
 		}
 	}
 
-//	static {
-//		AnonymousClass0Y1.A08("superpack-jni");
-//	}
+	static {
+		System.loadLibrary("superpack-jni");
+	}
 
 	public SuperpackArchive(long j) {
 		if (j != 0) {
